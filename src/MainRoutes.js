@@ -8,6 +8,7 @@ import FavoritePage from "./pages/FavoritePage";
 import HomePage from "./pages/HomePage";
 import AdminPage from "./pages/AdminPage";
 import ProductPage from "./pages/ProductPage";
+import ErrorPage from "./pages/ErrorPage/ErrorPage";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -51,10 +52,15 @@ const MainRoutes = () => {
       element: <ProductPage />,
       id: 8,
     },
+    {
+      link: "*",
+      element: <ErrorPage />,
+      id: 9,
+    },
   ];
   return (
     <Routes>
-      {PUBLIC_ROUTES.map((item) => (
+      {PUBLIC_ROUTES.map(item => (
         <Route path={item.link} element={item.element} key={item.id} />
       ))}
     </Routes>

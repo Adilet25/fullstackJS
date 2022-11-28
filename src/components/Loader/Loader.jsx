@@ -1,9 +1,9 @@
 import React from "react";
-import Loader from "../Loader/Loader.css";
+import "./Loader.css";
 
 const Loader = () => {
   return (
-    <>
+    <div className="loader">
       <svg
         class="pl"
         viewBox="0 0 64 64"
@@ -80,7 +80,7 @@ const Loader = () => {
           </g>
         </g>
       </svg>
-    </>
+    </div>
   );
 };
 
